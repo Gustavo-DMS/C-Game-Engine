@@ -13,7 +13,7 @@ shader = src/engine/shader/shader.c
 
 files=deps/src/glad.c src/main.c $(io) $(shader)
 
-libs=-lm `sdl2-config --cflags --libs` -lSDL2_mixer `pkg-config --libs glfw3` -ldl
+libs=-lm `sdl2-config --cflags --libs` -lSDL2_mixer `pkg-config --libs glfw3` -lSDL2_image -lcglm -ldl
 
 build:
 	gcc -g3 -O0 -I./deps/include $(files) $(libs) -o mygame.out
